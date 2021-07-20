@@ -1,10 +1,6 @@
 import React from "react";
 import "./Widgets.css";
-import {
-  TwitterTimelineEmbed,
-  TwitterShareButton,
-  TwitterTweetEmbed,
-} from "react-twitter-embed";
+
 import SearchIcon from "@material-ui/icons/Search";
 
 function Widgets() {
@@ -16,20 +12,24 @@ function Widgets() {
       </div>
 
       <div className="widgets__widgetContainer">
-        <h2>What's happening</h2>
-
-        <TwitterTweetEmbed tweetId={"858551177860055040"} />
-
-        <TwitterTimelineEmbed
-          sourceType="profile"
-          screenName="Mr. X"
-          options={{ height: 400 }}
-        />
-
-        <TwitterShareButton
-          url={"https://facebook.com/"}
-          options={{ text: "#reactjs ", via: "hey" }}
-        />
+      <h2>What's happening</h2>
+        <blockquote class="twitter-tweet">
+          <p lang="en" dir="ltr">
+            Prince Harry, one of the most talked-about figures in the world, is
+            publishing a memoir next year that he calls &quot;wholly
+            truthful.&quot;{" "}
+            <a href="https://t.co/7yvNORZ2zY">https://t.co/7yvNORZ2zY</a>
+          </p>
+          &mdash; CNN International (@cnni){" "}
+          <a href="https://twitter.com/cnni/status/1417237843794006044?ref_src=twsrc%5Etfw">
+            July 19, 2021
+          </a>
+        </blockquote>
+        <script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charset="utf-8"
+        ></script>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import "./Post.css";
-import { Avatar } from "@material-ui/core";
+import { Avatar, withWidth } from "@material-ui/core";
 import VerifiedUserIcon from "@material-ui/icons/VerifiedUser";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import RepeatIcon from "@material-ui/icons/Repeat";
@@ -29,7 +29,11 @@ const Post = forwardRef(
               <p>{text}</p>
             </div>
           </div>
-          <img src={image} alt="find img" />
+          {image === "" ? (
+            ""
+          ) : (
+            <img src={image} style={{ width: "400px" }} alt="find_img" />
+          )}
           <div className="post__footer">
             <ChatBubbleOutlineIcon fontSize="small" />
             <RepeatIcon fontSize="small" />
@@ -43,12 +47,6 @@ const Post = forwardRef(
 );
 
 export default Post;
-
-
-
-
-
-
 
 // import React, { forwardRef } from "react";
 // import "./Post.css";
